@@ -9,3 +9,6 @@ def normalize(value: Union[int, float, str]) -> float:
         value = value.replace(",", ".")
         return float(value)
     return float(value)
+
+
+print(normalize.__annotations__)

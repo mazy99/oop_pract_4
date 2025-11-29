@@ -15,7 +15,6 @@ class Box(Generic[T]):
         return self.value
 
 
-BoxInt = Box[int](123)
-BoxStr = Box[str]("Hello")
-print(BoxInt.get())  # Output: 123
-print(BoxStr.get())  # Output: Hello
+print(f"Типы данных класса Box: {Box.__annotations__}")
+print(f"Типы данных метода __init__:{Box.__init__.__annotations__}")
+print(f"Типы данных метода get: {Box.get.__annotations__}")
