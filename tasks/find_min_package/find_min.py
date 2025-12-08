@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 
-from typing import List, Protocol, TypeVar
+from typing import Protocol, TypeVar
 
 
 class AnyComparableClass(Protocol):
@@ -12,17 +12,7 @@ class AnyComparableClass(Protocol):
 T = TypeVar("T", bound=AnyComparableClass)
 
 
-def find_min(items: List[T]) -> T:
+def find_min(items: list[T]) -> T:
     if items:
         return min(items)
     raise ValueError("Список не должен быть пустым")
-
-
-def main():
-    items = ["apple", "banana", "cherry", "date"]
-    min_item = find_min(items)
-    print(f"Минимальный элемент в списке: {min_item}")
-
-
-if __name__ == "__main__":
-    main()
